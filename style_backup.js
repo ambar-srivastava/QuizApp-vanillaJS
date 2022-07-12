@@ -200,10 +200,6 @@ function createResultSection() {
     initialsDiv.appendChild(myInput); 
     initialsDiv.appendChild(button); 
 
-    //myInput.innerText = 'MRRRR';
-    //console.log ('myInput : ', myInput.innerText);
-
-
     newDisplay = document.createElement('section');
     newDisplay.appendChild(h1); 
     newDisplay.appendChild(scoreDiv); 
@@ -213,46 +209,6 @@ function createResultSection() {
     main.appendChild(newDisplay);
 
     button.addEventListener('click', addUserToHighScore ) ;
-
-/*
-    h1.setAttribute("class", "header")
-
-    newDisplay = document.createElement('section');
-    newDisplay.setAttribute("class", "displays")
-    newDisplay.appendChild(h1); 
-    main.appendChild(newDisplay); 
-    opt1 = document.createElement('div');
-    opt2 = document.createElement('div');
-    opt3 = document.createElement('div');
-    opt4 = document.createElement('div');
-
-
-    opt1.innerText = questions[questionNo].options[0];
-    opt2.innerText = questions[questionNo].options[1];
-    opt3.innerText = questions[questionNo].options[2];
-    opt4.innerText = questions[questionNo].options[3];
-    opt1.setAttribute("class", "questions");
-    opt2.setAttribute("class", "questions");
-    opt3.setAttribute("class", "questions");
-    opt4.setAttribute("class", "questions");
-
-    opt1.setAttribute("data-qnum", questionNo);
-    opt2.setAttribute("data-qnum", questionNo);
-    opt3.setAttribute("data-qnum", questionNo);
-    opt4.setAttribute("data-qnum", questionNo);
-
-
-    p = document.createElement('p');
-    button1 = document.createElement('button');
-    button1.innerText = 'Next';
-
-
-    newDisplay.appendChild(opt1); 
-    newDisplay.appendChild(opt2); 
-    newDisplay.appendChild(opt3); 
-    newDisplay.appendChild(opt4); 
-    newDisplay.appendChild(p); 
-*/
 }
 
 function addUserToHighScore(event ) {
@@ -335,35 +291,4 @@ function opt4f(){
 }
 
 
-startQ.addEventListener('click', startQuiz)
-
-
-
-/* OLD CODE
-    opt3.addEventListener('click',  () => {
-                   alert('opt3 clicked')
-                    console.log(opt3.innerText);
-                    console.log('opt3 length : ' + opt3.innerText.length);
-
-                    console.log(questions[0].answer);
-                    console.log('questions[0].answer length : ' + questions[0].answer.length);
-
-                   if (  opt3.innerText ===  questions[0].answer ) {
-                        result = true;
-                        score = score + 50;
-                    } else {
-                        result = false;
-                    }       
-                    console.log('result : ' + (opt3.innerText === questions[0].answer) );
-                    console.log('result : ' + result );
-                    if (result) {
-                        p.innerText = 'Correct';
-                    } else {
-                        p.innerText = 'Incorrect';
-
-                    }
-
-
-    });
-
-OLD CODE */
+startQ.addEventListener('click', startQuiz);
